@@ -798,6 +798,6 @@ flowchart TD
 
 ---
 
-*📝 Want to contribute? Check our [Contributing Guidelines](CONTRIBUTING.md) | 📄 [MIT License](LICENSE)*
+📄 [MIT License](LICENSE)*
 
 </div>
