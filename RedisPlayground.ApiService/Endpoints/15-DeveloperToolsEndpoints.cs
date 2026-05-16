@@ -373,7 +373,8 @@ public static partial class RedisEndpoints
                     switch (keyData.Type.ToLower())
                     {
                         case "string":
-                            await db.StringSetAsync(keyData.Key, keyData.Value, expiry);
+                            var strExpiration = expiry.HasValue ? new StackExchange.Redis.Expiration(expiry.Value) : StackExchange.Redis.Expiration.Default;
+                            await db.StringSetAsync(keyData.Key, keyData.Value, strExpiration);
                             break;
                         case "list":
                             var listValues = keyData.Value.Split(',');

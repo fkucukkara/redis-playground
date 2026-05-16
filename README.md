@@ -2,9 +2,9 @@
 
 # 🚀 Redis Playground
 
-### *A Modern .NET 9 Redis Operations Showcase*
+### *A Modern .NET 10 Redis Operations Showcase*
 
-[![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?style=for-the-badge&logo=dotnet)](https://dotnet.microsoft.com/)
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet)](https://dotnet.microsoft.com/)
 [![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
 [![Aspire](https://img.shields.io/badge/Aspire-512BD4?style=for-the-badge&logo=microsoft)](https://learn.microsoft.com/en-us/dotnet/aspire/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
@@ -42,7 +42,7 @@
 
 | Component | Technology |
 |-----------|------------|
-| **Runtime** | `.NET 9` with Minimal APIs |
+| **Runtime** | `.NET 10` with Minimal APIs |
 | **Orchestration** | `Microsoft Aspire` |
 | **Redis Client** | `StackExchange.Redis` |
 | **Documentation** | `OpenAPI/Swagger` |
@@ -157,7 +157,7 @@ sequenceDiagram
 <td width="50%">
 
 #### ✅ **Required**
-- 🔧 `.NET 9 SDK` 
+- 🔧 `.NET 10 SDK`
 - 🐳 `Docker Desktop`
 - 💻 `Git` (for cloning)
 

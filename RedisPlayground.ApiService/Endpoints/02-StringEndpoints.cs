@@ -49,7 +49,8 @@ public static partial class RedisEndpoints
         {
             var db = redis.GetDatabase();
             var expiry = request.ExpirationSeconds.HasValue ? TimeSpan.FromSeconds(request.ExpirationSeconds.Value) : (TimeSpan?)null;
-            var success = await db.StringSetAsync(key, request.Value, expiry);
+            var expiration = expiry.HasValue ? new StackExchange.Redis.Expiration(expiry.Value) : StackExchange.Redis.Expiration.Default;
+            var success = await db.StringSetAsync(key, request.Value, expiration);
             return TypedResults.Ok(new OperationResult(success, success ? "String set successfully" : "Failed to set string"));
         }
         catch (Exception ex)
