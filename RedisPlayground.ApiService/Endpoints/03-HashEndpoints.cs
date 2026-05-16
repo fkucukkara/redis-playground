@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapHashEndpoints(this WebApplication app)
     {
         var hashes = app.MapGroup("/hashes")
-            .WithTags("3. Redis Hashes")
-            .WithOpenApi();
+            .WithTags("3. Redis Hashes");
 
         hashes.MapPost("/{key}/fields", SetHashField)
             .WithName("SetHashField")

@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapBasicCacheEndpoints(this WebApplication app)
     {
         var cacheGroup = app.MapGroup("/cache")
-            .WithTags("1. Basic Cache")
-            .WithOpenApi();
+            .WithTags("1. Basic Cache");
 
         cacheGroup.MapGet("/{key}", GetCacheEntry)
             .WithName("GetCacheEntry")

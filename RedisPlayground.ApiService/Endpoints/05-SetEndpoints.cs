@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapSetEndpoints(this WebApplication app)
     {
         var sets = app.MapGroup("/sets")
-            .WithTags("5. Redis Sets")
-            .WithOpenApi();
+            .WithTags("5. Redis Sets");
 
         sets.MapPost("/{key}/add", AddToSet)
             .WithName("AddToSet")

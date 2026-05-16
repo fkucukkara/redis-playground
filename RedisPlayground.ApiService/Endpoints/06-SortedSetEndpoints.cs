@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapSortedSetEndpoints(this WebApplication app)
     {
         var sortedSets = app.MapGroup("/sorted-sets")
-            .WithTags("6. Redis Sorted Sets & Leaderboards")
-            .WithOpenApi();
+            .WithTags("6. Redis Sorted Sets & Leaderboards");
 
         sortedSets.MapPost("/{key}/add", AddToSortedSet)
             .WithName("AddToSortedSet")

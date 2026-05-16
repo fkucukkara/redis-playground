@@ -16,8 +16,7 @@ public static partial class RedisEndpoints
     public static void MapJsonEndpoints(this WebApplication app)
     {
         var json = app.MapGroup("/json")
-            .WithTags("11. Redis JSON")
-            .WithOpenApi();
+            .WithTags("11. Redis JSON");
 
         json.MapPost("/{key}", SetJson)
             .WithName("SetJson")

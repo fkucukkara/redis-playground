@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapStringEndpoints(this WebApplication app)
     {
         var strings = app.MapGroup("/strings")
-            .WithTags("2. Redis Strings")
-            .WithOpenApi();
+            .WithTags("2. Redis Strings");
 
         strings.MapPost("/{key}", SetString)
             .WithName("SetString")

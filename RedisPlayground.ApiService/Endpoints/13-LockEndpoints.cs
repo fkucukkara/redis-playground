@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapLockEndpoints(this WebApplication app)
     {
         var locks = app.MapGroup("/locks")
-            .WithTags("13. Redis Locks")
-            .WithOpenApi();
+            .WithTags("13. Redis Locks");
 
         locks.MapPost("/{lockName}/acquire", AcquireLock)
             .WithName("AcquireLock")

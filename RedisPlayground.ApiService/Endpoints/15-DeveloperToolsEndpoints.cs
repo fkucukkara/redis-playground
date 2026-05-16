@@ -16,8 +16,7 @@ public static partial class RedisEndpoints
     public static void MapDeveloperToolsEndpoints(this WebApplication app)
     {
         var devtools = app.MapGroup("/devtools")
-            .WithTags("15. Developer Tools")
-            .WithOpenApi();
+            .WithTags("15. Developer Tools");
 
         devtools.MapPost("/command", ExecuteRedisCommand)
             .WithName("ExecuteRedisCommand")

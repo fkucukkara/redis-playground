@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapBitfieldEndpoints(this WebApplication app)
     {
         var bitfield = app.MapGroup("/bitfield")
-            .WithTags("12. Redis Bitfields")
-            .WithOpenApi();
+            .WithTags("12. Redis Bitfields");
 
         bitfield.MapPost("/{key}/set", BitfieldSet)
             .WithName("BitfieldSet")

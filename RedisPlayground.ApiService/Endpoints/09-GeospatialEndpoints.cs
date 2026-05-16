@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapGeospatialEndpoints(this WebApplication app)
     {
         var geo = app.MapGroup("/geo")
-            .WithTags("9. Redis Geospatial")
-            .WithOpenApi();
+            .WithTags("9. Redis Geospatial");
 
         geo.MapPost("/{key}/add", AddGeoLocation)
             .WithName("AddGeoLocation")

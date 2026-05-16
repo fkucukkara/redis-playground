@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapListEndpoints(this WebApplication app)
     {
         var lists = app.MapGroup("/lists")
-            .WithTags("4. Redis Lists")
-            .WithOpenApi();
+            .WithTags("4. Redis Lists");
 
         lists.MapPost("/{key}/push", PushToList)
             .WithName("PushToList")

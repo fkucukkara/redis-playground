@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapStreamEndpoints(this WebApplication app)
     {
         var streams = app.MapGroup("/streams")
-            .WithTags("8. Redis Streams")
-            .WithOpenApi();
+            .WithTags("8. Redis Streams");
 
         streams.MapPost("/{stream}/add", AddToStream)
             .WithName("AddToStream")

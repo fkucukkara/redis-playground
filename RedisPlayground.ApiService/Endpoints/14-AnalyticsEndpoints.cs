@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapAnalyticsEndpoints(this WebApplication app)
     {
         var analytics = app.MapGroup("/analytics")
-            .WithTags("14. Redis Analytics")
-            .WithOpenApi();
+            .WithTags("14. Redis Analytics");
 
         analytics.MapGet("/info", GetRedisInfo)
             .WithName("GetRedisInfo")

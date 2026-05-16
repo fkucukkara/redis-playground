@@ -15,8 +15,7 @@ public static partial class RedisEndpoints
     public static void MapPubSubEndpoints(this WebApplication app)
     {
         var pubsub = app.MapGroup("/pubsub")
-            .WithTags("7. Redis Pub/Sub")
-            .WithOpenApi();
+            .WithTags("7. Redis Pub/Sub");
 
         pubsub.MapPost("/publish/{channel}", PublishMessage)
             .WithName("PublishMessage")
